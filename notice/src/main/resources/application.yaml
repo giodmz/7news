@@ -2,8 +2,8 @@ spring:
   application:
     name: notice
 
-    rabbitmq:
-      host: ${RABBITMQ_HOST:localhost}
-      port: 5672
-      username: user
-      password: secret
+  rabbitmq:
+    host: ${RABBITMQ_HOST:localhost}
+    port: 5672
+    username: ${RABBITMQ_USER}
+    password: ${RABBITMQ_PASSWORD}

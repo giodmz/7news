@@ -4,6 +4,7 @@ import notice.dto.NewsDTO;
 import notice.service.NewsService;
 import notice.service.PublisherService;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -24,11 +25,12 @@ public class NewsController {
         this.publisherService = publisherService;
     }
 
+    @PostMapping
     public ResponseEntity<Void> postNews(@RequestBody NewsDTO obj) {
         newsService.messageDTO(obj);
 
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest()
-                .path("/{news})")
+                .path("/{news}")
                 .buildAndExpand(obj.getUuid())
                 .toUri();
 

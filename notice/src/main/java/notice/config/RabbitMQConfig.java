@@ -17,6 +17,7 @@ public class RabbitMQConfig {
         return new Queue("news.sent", true, false,false );
     }
 
+    @Bean
     public MessageConverter messageConverter(){
         return new JacksonJsonMessageConverter();
     }
