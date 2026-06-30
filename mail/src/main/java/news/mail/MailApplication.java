@@ -1,4 +1,4 @@
-package _news.mail;
+package news.mail;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
