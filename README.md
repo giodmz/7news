@@ -4,9 +4,7 @@ Sistema de publicação e notificação de notícias construído com arquitetura
 
 ## Sobre o projeto
 
-O 7News demonstra na prática como microsserviços independentes se comunicam de forma assíncrona. Quando uma notícia é criada, o sistema a publica em uma fila de mensagens. Um segundo serviço escuta essa fila e envia automaticamente um e-mail com o conteúdo da notícia — incluindo imagem — para o destinatário configurado.
-
-Se o serviço de e-mail cair, os pedidos continuam sendo processados normalmente. As mensagens ficam guardadas na fila e são processadas quando o serviço voltar, sem perda de dados.
+O 7News demonstra na prática como microsserviços independentes se comunicam de forma assíncrona. Quando uma notícia é criada, o sistema a publica em uma fila de mensagens. Um segundo serviço escuta essa fila e envia automaticamente um e-mail com o conteúdo da notícia, incluindo imagem para o destinatário configurado.
 
 ## Arquitetura
 
