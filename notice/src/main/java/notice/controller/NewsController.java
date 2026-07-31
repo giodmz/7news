@@ -1,5 +1,6 @@
 package notice.controller;
 
+import jakarta.validation.Valid;
 import notice.dto.NewsDTO;
 import notice.service.NewsService;
 import notice.service.PublisherService;
@@ -26,7 +27,7 @@ public class NewsController {
     }
 
     @PostMapping
-    public ResponseEntity<Void> postNews(@RequestBody NewsDTO obj) {
+    public ResponseEntity<Void> postNews(@Valid @RequestBody NewsDTO obj) {
         newsService.messageDTO(obj);
 
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest()
